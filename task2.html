@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<div class="task2">
+    <form>
+        <button type="submit" class="btn btn-primary" name="retrieve-news" onclick="apiCall()">Retrieve Books</button>
+    </form>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+    function apiCall() {
+        $('button').click(function () {
+            $.get("https://www.googleapis.com/books/v1/volumes?q=twilight", function () {
+                console.log("test")
+            });
+        });
+    }
+</script>
+</html>
